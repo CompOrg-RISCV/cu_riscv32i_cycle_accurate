@@ -141,9 +141,8 @@ DEF_OPC(srl, "srl", RTYPE_SRL)
 DEF_OPC(sra, "sra", RTYPE_SRA)
 DEF_OPC(or, "or", RTYPE_OR)
 DEF_OPC(and, "and", RTYPE_AND)
-DEF_OPC(mask, "mask", RTYPE_MASK)
 
-set opc_rtype_alu = opc_add, opc_sub, opc_sll, opc_slt, opc_sltu, opc_xor, opc_srl, opc_sra, opc_or, opc_and, opc_mask;
+set opc_rtype_alu = opc_add, opc_sub, opc_sll, opc_slt, opc_sltu, opc_xor, opc_srl, opc_sra, opc_or, opc_and;
 
 element i_rtype_alu           // define the instruction for the rtype arithmetic opcodes
 {
@@ -211,9 +210,6 @@ element i_rtype_alu           // define the instruction for the rtype arithmetic
                 break;
             case RTYPE_AND:
                 result = src1 & src2;
-                break;
-            case RTYPE_MASK:
-                result = ~src1 & src2;
                 break;
             default:
                 result = 0;
