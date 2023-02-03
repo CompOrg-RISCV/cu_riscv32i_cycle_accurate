@@ -983,7 +983,7 @@ emulation e_movi32
 
     use i_utype_ops as i_lui0, i_lui1;
     use i_rtype_alu as i_or;
-    use i_shift_imm as i_srli;
+    use i_itype_special as i_srli;
 
     unsigned attribute bit[32] imm32;
 
