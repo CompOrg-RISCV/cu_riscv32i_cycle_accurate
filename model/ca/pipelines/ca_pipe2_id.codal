@@ -91,7 +91,7 @@ event id : pipeline(pipe.ID)
         // TO optimize performance, the immediate value will always be calculated and passed to the execution stage
         // via the ID pipeline register
         // Use the concatanation operator :: to create the desired fields from the instruction field if required
-        s_id_imm_rtype =
+        s_id_imm_special_itype =
         s_id_imm_itype =
         s_id_imm_stype =
         s_id_imm_btype = (int32)(int13) (s_id_instr[31..31] :: s_id_instr[7..7] :: s_id_instr[30..25] :: s_id_instr[11..8] :: (uint1)0);
@@ -157,7 +157,7 @@ event id_output : pipeline(pipe.ID)
         //
         // Example:
         //      switch (s_id_imm_gen_sel) {
-        //          case RTYPE_IMM_SEL:
+        //          case SPECIAL_ITYPE_IMM_SEL:
         //              r_id_src2_imm = s_id_imm_rtype;
         //              break;
         //          ...
