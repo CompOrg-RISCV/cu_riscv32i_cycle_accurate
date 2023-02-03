@@ -59,7 +59,7 @@
 // -------------------------------------------------------------------------------------------------
 enum imm_gen_mux        // Select lines for generating the proper immediate to pass to the execute stage
 {
-    RTYPE_IMM_SEL,
+    SPECIAL_ITYPE_IMM_SEL,
     ITYPE_IMM_SEL,
     STYPE_IMM_SEL,
     BTYPE_IMM_SEL,
