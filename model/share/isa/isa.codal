@@ -46,7 +46,7 @@
 // a complete set of RISCV instructions must be defined.  We us the set operator to combine the separate RISCV
 // instructions into a single set, isa
 set isa = i_rtype_alu,
-    i_shift_imm,
+    i_itype_special,
     i_itype_alu,
     i_itype_loads,
     i_stype_store,
@@ -228,11 +228,11 @@ DEF_OPC(slli, "slli", IMM_SHIFT_SLLI)
 DEF_OPC(srli, "srli", IMM_SHIFT_SRLI)
 DEF_OPC(srai, "srai", IMM_SHIFT_SRAI)
 
-set opc_shift_imm = opc_slli, opc_srli, opc_srai;
+set opc_itype_special = opc_slli, opc_srli, opc_srai;
 
-element i_shift_imm                     // define the instruction for the shift immediate opcodes
+element i_itype_special                     // define the instruction for the shift immediate opcodes
 {
-    use opc_shift_imm as opc;
+    use opc_itype_special as opc;
     use xpr_all as rs1, rd;
     use uimm5 as imm;
     assembly { opc rd "," rs1 "," imm};
