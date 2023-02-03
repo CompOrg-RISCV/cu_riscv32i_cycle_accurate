@@ -171,9 +171,9 @@ element i_hw_itype_alu
 // Rtype Immediate shif instructions
 // -------------------------------------------------------------------------------------------------
 
-//element i_hw_rtype_shift
+//element i_hw_itype_special
 //{
-//    use opc_rtype_shift as opc;
+//    use opc_itype_special as opc;
 //
 //    assembly { opc };
 //    binary { opc };
