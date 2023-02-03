@@ -56,7 +56,6 @@ enum BTYPE_OPCODES : uint10 {
 // R-Type 2-argument Opcodes
 // func7(bits(bits 25:31) | func3(bits 12:14) | opcode (bits 0:6)
 enum RTYPE_OPCODES : uint17 {
-    RTYPE_MASK  = 0b11101000000110011,  // rd = rs1 & ~rs2
     RTYPE_ADD   = 0b00000000000110011,
     RTYPE_SUB   = 0b01000000000110011,
     RTYPE_SLL   = 0b00000000010110011,
